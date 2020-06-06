@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components
 // import Home from '../pages/Home';
+import "../assets/styles/App.scss"
 import Layout from './Layout';
 import NotFound from '../pages/NotFound';
 
