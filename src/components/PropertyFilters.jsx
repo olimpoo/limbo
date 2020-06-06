@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import { Icon } from '@blueprintjs/core';
 import '../assets/styles/PropertyFilters.scss';
 
-const IconsNames = [
-  'camera',
-  'mobile-video',
-  'control',
-  'map-marker',
-  'globe-network',
-];
+const IconsNames = ['camera', 'video', 'columns', 'map-marker-alt', 'globe'];
 
 const Filters = ({ property }) => {
   const [active, setActive] = useState('camera');
@@ -16,15 +9,14 @@ const Filters = ({ property }) => {
   return (
     <div>
       <div className='PropertyFilters d-flex justify-content-between'>
-        {IconsNames.map((iconName) => (
-          <Icon
-            icon={iconName}
-            iconSize={24}
-            className={`PropertyFilters__button ${
+        {IconsNames.map((iconName, index) => (
+          <i
+            key={index}
+            className={`fas fa-${iconName} PropertyFilters__button ${
               active === iconName ? 'PropertyFilters__button--active' : ''
             } `}
             onClick={() => setActive(iconName)}
-          />
+          ></i>
         ))}
       </div>
     </div>
