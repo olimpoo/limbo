@@ -1,10 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import '../assets/styles/Layout.scss'
+import Navbar from './Navbar'
 
 const Layout = ({ children }) => (
   <div>
-    Yo soy un layout
-    {children}
+    <Navbar />
+    { children }
   </div>
 );
 

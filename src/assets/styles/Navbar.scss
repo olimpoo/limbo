@@ -1,0 +1,29 @@
+@import './Theme.scss';
+
+.Navbar {
+    background: $white;
+    color: $font-color;
+    width: $full;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+    align-content: center;
+    box-shadow: $shadow;
+    font-size: $font-base;
+}
+
+.Navbar__logo {
+    margin: auto;
+}
+
+.Navbar__menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar__menu-item {
+    cursor: pointer;
+    margin: 0 $space-md;
+}
