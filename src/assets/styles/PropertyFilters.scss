@@ -1,0 +1,17 @@
+.PropertyFilters {
+  padding: 0.5rem 0;
+
+  &__button {
+    border-radius: 100px;
+    color: #dedede;
+    cursor: pointer;
+    padding: 0.2rem 1rem;
+    transition: 0.3s;
+
+    &--active,
+    &:hover {
+      background-color: #61c1e7;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.Property {
+  &__header {
+    h3 {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 728px) {
+  .Property {
+    &__header {
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

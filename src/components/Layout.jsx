@@ -1,11 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import '../assets/styles/Layout.scss';
 
-const Layout = ({ children }) => (
-  <div>
-    Yo soy un layout
-    {children}
-  </div>
-);
+const Layout = ({ children }) => <div>{children}</div>;
 
 export default Layout;
