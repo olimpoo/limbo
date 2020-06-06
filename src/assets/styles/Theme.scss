@@ -1,9 +1,19 @@
+// Colors
 $primary-color: #dd7230;
 $black: #00171f;
 $white: #fefefe;
 $font-color: rgba($black, .85);
+
+// Typo
 $font-base: 1rem;
+
+// Sizing
 $full: 100%;
 $space-base: 8px;
 $space-md: $space-base * 2;
+$space-lg: $space-base * 3;
+$space-xl: $space-md * 2;
+$space-2xl: $space-xl * 2;
+
+// Utils
 $shadow: 0 4px 6px -1px rgba($black, .1), 0 2px 4px -1px rgba($black, 0.06);

@@ -1,7 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
-import '../assets/styles/Layout.scss'
 import Navbar from './Navbar'
+import '../assets/styles/Layout.scss'
 
 const Layout = ({ children }) => (
   <div>
