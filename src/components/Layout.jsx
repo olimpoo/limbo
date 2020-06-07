@@ -1,6 +1,13 @@
 import React from 'react';
-import '../assets/styles/Layout.scss';
+import Navbar from './Navbar'
+import '../assets/styles/Layout.scss'
 
-const Layout = ({ children }) => <div className='Layout'>{children}</div>;
+const Layout = ({ children }) => (
+  <div className='Layout'>
+    <Navbar />
+    { children }
+  </div>
+);
+
 
 export default Layout;
