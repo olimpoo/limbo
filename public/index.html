@@ -44,4 +44,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    window.onload = () => {
+      var docWidth = document.documentElement.offsetWidth;
+
+      [].forEach.call(document.querySelectorAll('*'), function (el) {
+        if (el.offsetWidth > docWidth) {
+          console.log(el);
+        }
+      });
+    };
+  </script>
 </html>

@@ -137,7 +137,7 @@ const PropertyDescription = ({ property }) => (
       </h3>
       <div className='my-2'>
         <div className='my-2'>
-          <a className='text-gray' href='#'>
+          <a className='text-info' href='/'>
             Jhon Doe
           </a>
         </div>

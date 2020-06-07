@@ -1,5 +1,7 @@
 .PropertyFilters {
+  max-width: 1200px;
   padding: 0.5rem 0;
+  margin: auto;
 
   &__button {
     border-radius: 100px;
@@ -11,7 +13,7 @@
 
     &--active,
     &:hover {
-      background-color: #61c1e7;
+      background-color: #dd7230e8;
       color: #ffffff;
     }
   }

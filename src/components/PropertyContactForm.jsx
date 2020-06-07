@@ -1,11 +1,11 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import '../assets/styles/PropertyContactForm.scss';
 
 const ContactForm = () => (
-  <Card className='sticky-top'>
+  <Card className='PropertyContactForm sticky-top my-2'>
     <Card.Body>
       <p>
         <b>Mensaje al anunciante</b>
@@ -13,30 +13,38 @@ const ContactForm = () => (
       <Form>
         <Form.Group controlId='formBasicEmail'>
           <Form.Label>Email</Form.Label>
-          <Form.Control type='email' placeholder='Ingresa tu email' />
+          <Form.Control required type='email' placeholder='Ingresa tu email' />
           <Form.Text className='text-muted'>
             Nunca compartiremos tu email con nadie
           </Form.Text>
         </Form.Group>
 
-        <Form.Group controlId='formBasicName'>
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control type='text' placeholder='Ingresa tu nombre' />
-        </Form.Group>
+        <div className='d-lg-flex'>
+          <Form.Group className='mr-lg-1' controlId='formBasicName'>
+            <Form.Label>Nombre</Form.Label>
+            <Form.Control
+              required
+              type='text'
+              placeholder='Ingresa tu nombre'
+            />
+          </Form.Group>
 
-        <Form.Group controlId='formBasicName'>
-          <Form.Label>Teléfono</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Ingresa tu número de teléfono'
-          />
-        </Form.Group>
+          <Form.Group className='ml-lg-1' controlId='formBasicName'>
+            <Form.Label>Teléfono</Form.Label>
+            <Form.Control
+              required
+              type='text'
+              placeholder='Ingresa tu número de teléfono'
+            />
+          </Form.Group>
+        </div>
 
         <Form.Group controlId='ControlTextarea'>
           <Form.Label>Mensaje</Form.Label>
           <Form.Control
+            required
             as='textarea'
-            value='Hola, me interesa este inmueble que vi en Conlallave y quiero que me contacten. Gracias.'
+            value='Hola, me interesa este inmueble que vi en Limbo y quiero que me contacten. Gracias.'
             rows='3'
           />
         </Form.Group>

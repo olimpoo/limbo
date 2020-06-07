@@ -2,10 +2,11 @@
 
 .Navbar {
   background: $white;
-  color: $font-color;
-  width: $full;
   box-shadow: $shadow;
+  color: $font-color;
   font-size: $font-base;
+  top: -1px;
+  width: $full;
 }
 
 .Navbar__menu {
@@ -33,8 +34,6 @@
   font-weight: bold;
 }
 
-
-	
 @media screen and (min-width: 768px) {
   .Navbar {
     display: flex;
@@ -58,10 +57,10 @@
     width: max-content;
     padding: $space-lg;
   }
-  
+
   .Navbar__dropdown-container {
     display: grid;
-    grid-template-columns: repeat(3, .9fr);
+    grid-template-columns: repeat(3, 0.9fr);
   }
 
   .Navbar__dropdown-item {

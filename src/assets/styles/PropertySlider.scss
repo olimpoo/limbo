@@ -1,4 +1,49 @@
+@import 'variables';
+
 .PropertySlider,
 .PropertySlider > img {
-  max-width: 100%;
+  max-width: 1160px;
+  margin: auto;
+}
+
+.PropertySlider__caption {
+  bottom: 0.5rem;
+  justify-content: space-between;
+  left: 0.5rem;
+  padding: 0;
+  right: 0.5rem;
+}
+
+.PropertySlider__heart {
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  color: $primary-color;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  outline: none;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 2rem;
+  z-index: 999;
+}
+
+@media only screen and (min-width: 992px) {
+  .PropertySlider__caption {
+    justify-content: start;
+  }
+
+  .PropertySlider__heart {
+    border-radius: 4px;
+    height: auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: auto;
+    i {
+      padding-bottom: 2px;
+    }
+  }
 }

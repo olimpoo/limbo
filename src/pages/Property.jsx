@@ -3,11 +3,11 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import Filters from '../components/PropertyFilters';
 import Slider from '../components/PropertySlider';
 import Description from '../components/PropertyDescription';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/PropertyContactForm';
 import Related from '../components/Related';
 
 import '../assets/styles/Property.scss';
@@ -45,44 +45,98 @@ const property = {
 
 const Property = (props) => (
   <div className='Property'>
-    <Container className='mb-4'>
-      <Row>
-        <Col xs={12} lg={8} className='mb-2'>
-          <Filters property={property}></Filters>
-          <Slider images={property.images}></Slider>
-          <Container>
-            <div className='Property__header'>
-              <h3 className='mb-2'>
-                <b>
-                  {property.type} · {property.area}m<sup>2</sup> ·{' '}
-                  {property.rooms} Habitaciones · {property.parkingLots} ·
-                  Estacionamientos
-                </b>
-              </h3>
-              <p className='mb-2'>
-                <b>{property.sector}</b>, {property.parish},{' '}
-                {property.municipality}
-              </p>
-            </div>
-            <Card className='my-2'>
-              <Card.Body className='d-flex justify-content-between p-2'>
-                <h3>
-                  <b>Venta</b>
+    <div className=' d-xl-flex flex-row-reverse'>
+      <div className='Property__contact-form d-lg d-none d-xl-block mb-3'>
+        <Card className='my-2'>
+          <Card.Body className='d-flex justify-content-between p-2'>
+            <h3>
+              <b>Venta</b>
+            </h3>
+            <h3>
+              <b>{property.price}$</b>
+            </h3>
+          </Card.Body>
+        </Card>
+        <ContactForm />
+      </div>
+      <div className='Property__wrapper'>
+        <Container fluid>
+          <Row>
+            <Col xs={12} className='mb-2 Property__hero'>
+              <Filters property={property}></Filters>
+              <Slider images={property.images}></Slider>
+            </Col>
+          </Row>
+        </Container>
+
+        <Container>
+          <Row>
+            <Col xs={12} lg={8} xl={12} className='mb-3'>
+              <div className='Property__buttons d-none d-xl-block mt-2 mb-3'>
+                <Row>
+                  <Col>
+                    <Button
+                      block
+                      variant='primary'
+                      className='btn-primary-inverse'
+                    >
+                      Quiero que me llamen
+                    </Button>
+                  </Col>
+                  <Col>
+                    <Button
+                      block
+                      variant='primary'
+                      className='btn-primary-inverse'
+                    >
+                      Enviar consulta
+                    </Button>
+                  </Col>
+                  <Col>
+                    <Button
+                      block
+                      variant='primary'
+                      className='btn-primary-inverse'
+                    >
+                      Agendar visita
+                    </Button>
+                  </Col>
+                </Row>
+              </div>
+              <div className='Property__header'>
+                <h3 className='mb-2'>
+                  <b>
+                    {property.type} · {property.area}m<sup>2</sup> ·{' '}
+                    {property.rooms} Habitaciones · {property.parkingLots} ·
+                    Estacionamientos
+                  </b>
                 </h3>
-                <h3>
-                  <b>{property.price}$</b>
-                </h3>
-              </Card.Body>
-            </Card>
-            <Description property={property} />
-          </Container>
-        </Col>
-        <Col xs={12} lg={4} className='mb-2'>
-          <ContactForm />
-        </Col>
-      </Row>
-    </Container>
-    <div className='bg-light p-3'></div>
+                <p className='mb-2'>
+                  <b>{property.sector}</b>, {property.parish},{' '}
+                  {property.municipality}
+                </p>
+              </div>
+              <hr className='d-xl-block d-none' />
+              <Card className='my-3 d-xl-none'>
+                <Card.Body className='d-flex justify-content-between p-2'>
+                  <h3>
+                    <b>Venta</b>
+                  </h3>
+                  <h3>
+                    <b>{property.price}$</b>
+                  </h3>
+                </Card.Body>
+              </Card>
+              <Description property={property} />
+            </Col>
+            <Col xs={12} lg={4} className='mb-3 d-lg d-xl-none'>
+              <ContactForm />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
+    <div className='divider bg-light p-3'>&nbsp;</div>
     <Related property={property}></Related>
   </div>
 );

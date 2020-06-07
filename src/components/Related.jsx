@@ -7,9 +7,12 @@ import { Link } from 'react-router-dom';
 
 const Related = ({ property }) => (
   <Container className='my-4'>
+    <p style={{ 'margin-left': '-5px' }}>
+      <b>Más inmuebles como este</b>
+    </p>
     <Row>
       {property.related.map((image, index) => (
-        <Col className='px-2'>
+        <Col xs={12} md={6} lg={3} className='px-2 my-2 my-lg-0'>
           <Link
             to={`/propiedades/${index}`}
             className='text-reset text-decoration-none'
