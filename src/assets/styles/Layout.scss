@@ -1,4 +1,4 @@
-@import './variables';
+@import './Theme.scss';
 
 .Layout {
   max-width: 100%;
@@ -7,7 +7,8 @@
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:not(:disabled):not(.disabled):active {
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
   background-color: $primary-color;
   border: 1px solid $primary-color;
   color: #ffffff;
@@ -20,4 +21,13 @@
 
 .text-primary {
   color: $primary-color !important;
+}
+
+.card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
 }
