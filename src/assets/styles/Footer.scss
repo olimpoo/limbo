@@ -1,0 +1,69 @@
+@import './_theme.scss';
+
+.Footer {
+  background: $secondary-color;
+  color: $white;
+}
+
+.Footer__columns {
+  padding: $size-xl $size-2xl;
+  padding-bottom: $size-base;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $size-base;
+}
+
+.Footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer__column-title {
+  margin-bottom: $size-base;
+}
+
+.Footer__column-link {
+  color: rgba($white, .75);
+  font-size: $size-md;
+  width: max-content;
+}
+
+.Footer__column-link:hover,
+.Footer__copyright-link{
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.Footer__copyright-link:hover {
+  color: $primary-color;
+}
+
+.Footer__copyright {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $size-md $size-2xl $size-base;
+}
+
+.Footer__copyright-policy {
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer__copyright-brand {
+  margin-top: $size-base;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 568px) {
+  .Footer__columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .Footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+}

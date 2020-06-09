@@ -1,4 +1,4 @@
-@import './Theme.scss';
+@import './_theme.scss';
 
 .Navbar {
   background: $white;
@@ -26,7 +26,7 @@
 .Navbar__buttons-button,
 .Navbar__menu-item,
 .Navbar__dropdown {
-  margin: 0 $space-base;
+  margin: 0 $size-base;
 }
 
 .Navbar-cta {
@@ -38,7 +38,7 @@
   .Navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: size-between;
   }
 
   .Navbar__menu {
@@ -55,7 +55,7 @@
 
   .dropdown-menu {
     width: max-content;
-    padding: $space-lg;
+    padding: $size-lg;
   }
 
   .Navbar__dropdown-container {
@@ -87,13 +87,13 @@
   }
 
   .Navbar__menu-item {
-    margin: 0 $space-md;
+    margin: 0 $size-md;
   }
 
   .Navbar__dropdown-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: $space-2xl;
+    gap: $size-2xl;
   }
 
   .dropdown-menu {
