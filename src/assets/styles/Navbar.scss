@@ -7,6 +7,10 @@
   font-size: $font-base;
   top: -1px;
   width: $full;
+
+  .dropdown-menu {
+    left: -125px;
+  }
 }
 
 .Navbar__menu {
@@ -39,6 +43,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .dropdown-menu {
+      width: max-content;
+      padding: $space-lg;
+    }
   }
 
   .Navbar__menu {
@@ -53,11 +62,6 @@
     padding-left: 0;
   }
 
-  .dropdown-menu {
-    width: max-content;
-    padding: $space-lg;
-  }
-
   .Navbar__dropdown-container {
     display: grid;
     grid-template-columns: repeat(3, 0.9fr);
@@ -66,16 +70,16 @@
   .Navbar__dropdown-item {
     color: $primary-color !important;
   }
-
-  .dropdown-menu {
-    left: -125px;
-  }
 }
 
 @media screen and (min-width: 1316px) {
   .Navbar {
     display: grid;
     grid-template-columns: auto 2fr 1fr;
+
+    .dropdown-menu {
+      left: 0;
+    }
   }
 
   .Navbar__menu {
@@ -94,9 +98,5 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $space-2xl;
-  }
-
-  .dropdown-menu {
-    left: 0;
   }
 }
