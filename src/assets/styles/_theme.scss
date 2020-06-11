@@ -3,10 +3,11 @@ $primary-color: #dd7230;
 $secondary-color: #313638;
 $black: #00171f;
 $white: #fefefe;
-$font-color: rgba($black, .85);
 
 // Typo
 $font-base: 1rem;
+$font-md: 1.25rem;
+$font-color: rgba($black, .85);
 
 // Sizing
 $full: 100%;
@@ -18,3 +19,7 @@ $size-2xl: $size-xl * 2;
 
 // Utils
 $shadow: 0 4px 6px -1px rgba($black, .1), 0 2px 4px -1px rgba($black, 0.06);
+
+// Breakpoints
+$view-md: 768px;
+$view-lg: 1316px;

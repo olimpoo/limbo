@@ -8,7 +8,7 @@ const rooms = ['1 habitación', '2 a 3 habitaciones', 'Más de 5 habitaciones'];
 
 const Navigation = () => (
   <Navbar expand='md' className='Navbar sticky-top'>
-    <Navbar.Brand href='#' className='Navbar__brand'>
+    <Navbar.Brand href='/' className='Navbar__brand'>
       Limbo
     </Navbar.Brand>
     <Nav className='Navbar__menu'>
@@ -82,7 +82,7 @@ const Navigation = () => (
       <Nav.Link className='Navbar__menu-item'>Ayuda</Nav.Link>
     </Nav>
     <Nav className='Navbar__buttons'>
-      <Nav.Link className='Navbar__buttons-button'>Login</Nav.Link>
+      <Nav.Link className='Navbar__buttons-button'>Ingresar</Nav.Link>
       <Nav.Link className='Navbar__buttons-button Navbar-cta'>Registrarse</Nav.Link>
       <Navbar.Toggle aria-controls='Navbar__menu-mobile' />
     </Nav>
