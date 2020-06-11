@@ -7,6 +7,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PropertySlider from './PropertySlider';
+import Property from './PropertiesListProperty';
 import '../assets/styles/PropertiesList.scss';
 
 const orderOptions = [
@@ -19,12 +20,6 @@ const orderOptions = [
   'Antiguos',
   'Amplios',
   'Pequeños',
-];
-
-const images = [
-  'https://source.unsplash.com/1000x500/?house',
-  'https://source.unsplash.com/800x400/?house',
-  'https://source.unsplash.com/700x350/?house',
 ];
 
 const PropertiesList = ({}) => {
@@ -68,35 +63,22 @@ const PropertiesList = ({}) => {
           ))}
         </DropdownButton>
       </div>
-      <div>
-        <Card className='PropertiesList__card'>
-          <Row>
-            <Col xs={12} md={5}>
-              <Card>
-                <PropertySlider images={images}></PropertySlider>
-                <div className='p-3'>
-                  <h5>
-                    <b>US$ {parseInt(Math.random() * 10000)}</b>
-                  </h5>
-                </div>
-              </Card>
-            </Col>
-            <Col xs={12} md={7}>
-              <div className='p-3'>
-                <h5>
-                  <a href='#'>
-                    Apartamento Consolitex Vende La Trigaleña Mirian
-                  </a>
-                </h5>
-                <p className='mb-2'>URB LA TRIGALEÑA, La Trigaleña, Valencia</p>
-                <p>
-                  <b></b>
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Card>
-      </div>
+      <Row>
+        <Col xl={2}>
+          <Card className='my-3'>
+            <Card.Body>
+              <h3>Filters</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col lg={12} xl={10}>
+          <Property />
+          <Property />
+          <Property />
+          <Property />
+          <Property />
+        </Col>
+      </Row>
     </>
   );
 };
