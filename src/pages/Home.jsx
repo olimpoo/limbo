@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import HomeSearch from '../components/HomeSearch';
 import '../assets/styles/Home.scss';
@@ -23,15 +23,43 @@ const bestDeals = [
 ];
 
 
-const Home = () => (
+const Home = () => {
+  const [isPurchase, handlePurchase] = useState(true)
+  const [isRent, handleRent] = useState(false)
+
+  const changeToPurchase = () => {
+    handlePurchase(true)
+    handleRent(false)
+  }
+
+  const changeToRent = () => {
+    handlePurchase(false)
+    handleRent(true)
+  }
+
+  return (
   <>
     <div className="Hero">
       <div className="Hero__content">
         <h1 className="Hero__content-heading">¿Perdido en el Limbo?</h1>
         <h3 className="Hero__content-text">Nosotros te ayudamos</h3>
         <div className="Hero__content__tabs">
-          <span className={"Hero__content__tabs-tab"}>Quiero comprar</span>
-          <span className="Hero__content__tabs-tab">Quiero alquilar</span>
+          <span
+            onClick={ () => changeToPurchase() }
+            className={
+              isPurchase ? 'Hero__content__tabs-tab is-active' : 'Hero__content__tabs-tab'
+            }
+          >
+            Quiero comprar
+          </span>
+          <span
+            onClick={ () => changeToRent() }
+            className={
+              isRent ? 'Hero__content__tabs-tab is-active' : 'Hero__content__tabs-tab'
+            }
+          >
+            Quiero alquilar
+          </span>
         </div>
         <HomeSearch />
       </div>
@@ -41,7 +69,7 @@ const Home = () => (
       <div className="Section__featured">
         { featured.map((image) => <img src={image} className="Section__featured-image" alt="Propiedad destacada"/>) }
       </div>
-      <a href="/" className="Section-link">Explorar todas</a>
+      <a href="/propiedades" className="Section-link">Explorar todas</a>
     </div>
     <div className="Section">
       <h3 className="Section-title">Mejores Ofertas</h3>
@@ -50,9 +78,10 @@ const Home = () => (
           <img className="Section__deals-image" src={image} alt="Oferta destacada" />
         ) }
       </div>
-      <a href="/" className="Section-link">Ver más ofertas</a>
+      <a href="/propiedades" className="Section-link">Ver más ofertas</a>
     </div>
   </>
-);
+  )
+};
 
 export default Home;

@@ -37,15 +37,21 @@
 }
 
 .Hero__content__tabs-tab {
-  background: $primary-color;
+  background: rgba($secondary-color, .6);
   padding: $size-base;
   border-radius: 4px;
   margin-right: $size-base;
   font-size: $font-base;
   cursor: pointer;
+  transition: background ease-in-out .3s;
+  border: 1px solid rgba($primary-color, .3);
 }
 
-.Hero__content__tabs-tab.is-tab-active {
+.Hero__content__tabs-tab:hover {
+  background: rgba($primary-color, .5);
+}
+
+.Hero__content__tabs-tab.is-active {
   background: $primary-color;
 }
 
