@@ -1,3 +1,13 @@
-.PropertiesList__card .card {
+.PropertiesListProperty .card {
   box-shadow: none;
+}
+
+.PropertiesListProperty__contact {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.PropertiesList__filters .btn-group > .btn {
+  flex: 0;
 }

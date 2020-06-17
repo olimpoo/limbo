@@ -6,14 +6,20 @@ import PropertiesFilters from '../components/PropertiesFilters';
 import PropertiesList from '../components/PropertiesList';
 
 const Properties = () => {
+  const [openFilters, setOpenFilters] = useState(false);
+
+  const handleClickFilters = (event) => {
+    setOpenFilters(!openFilters);
+  };
+
   return (
     <Container fluid>
       <Row>
         <Col xs={12}>
-          <PropertiesFilters />
+          <PropertiesFilters onClickFilters={handleClickFilters} />
         </Col>
         <Col xs={12}>
-          <PropertiesList />
+          <PropertiesList openedFilters={openFilters} />
         </Col>
       </Row>
     </Container>
