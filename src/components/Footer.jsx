@@ -27,16 +27,16 @@ const Footer = () => (
       <div className="Footer__column">
         <strong className="Footer__column-title">Síguenos</strong>
         <a href="/" className="Footer__column-link">
-          <i class="fab fa-facebook mr-2"></i>Facebook
+          <i className="fab fa-facebook mr-2"></i>Facebook
         </a>
         <a href="/" className="Footer__column-link">
-          <i class="fab fa-twitter mr-2"></i>Twitter
+          <i className="fab fa-twitter mr-2"></i>Twitter
         </a>
         <a href="/" className="Footer__column-link">
-          <i class="fab fa-instagram mr-2"></i>Instagram
+          <i className="fab fa-instagram mr-2"></i>Instagram
         </a>
         <a href="/" className="Footer__column-link">
-          <i class="fab fa-linkedin mr-2"></i>Linkedin
+          <i className="fab fa-linkedin mr-2"></i>Linkedin
         </a>
       </div>
     </div>

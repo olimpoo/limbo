@@ -1,0 +1,39 @@
+@import './theme';
+
+.Search {
+  padding-top: $size-base;
+}
+
+.Search__bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $full;
+  background: $white;
+  border-radius: $size-base;
+}
+
+.Search__bar-input {
+  width: $full;
+  display: block;
+}
+
+.Search__bar-input:focus {
+  outline: none;
+}
+
+.Search__bar-button {
+  background: $primary-color;
+  padding: $size-base;
+  color: $white;
+  border-bottom-right-radius: $size-base;
+  border-top-right-radius: $size-base;
+  display: flex;
+  align-items: center;
+}
+
+.Search__bar-button:hover {
+  background-color: rgba($primary-color, .85);
+  color: white;
+  text-decoration: none;
+}
