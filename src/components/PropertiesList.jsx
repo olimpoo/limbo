@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -381,11 +382,21 @@ const PropertiesList = ({ openedFilters }) => {
             <b>{parseInt(Math.random() * 10000)}</b>
             &nbsp;Casas relevantes en Venezuela
           </p>
-          <Property />
-          <Property />
-          <Property />
-          <Property />
-          <Property />
+          <Link to='/propiedades/1' className='text-reset text-decoration-none'>
+            <Property />
+          </Link>
+          <Link to='/propiedades/2' className='text-reset text-decoration-none'>
+            <Property />
+          </Link>
+          <Link to='/propiedades/3' className='text-reset text-decoration-none'>
+            <Property />
+          </Link>
+          <Link to='/propiedades/4' className='text-reset text-decoration-none'>
+            <Property />
+          </Link>
+          <Link to='/propiedades/5' className='text-reset text-decoration-none'>
+            <Property />
+          </Link>
         </Col>
       </Row>
     </>

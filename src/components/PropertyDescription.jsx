@@ -14,7 +14,7 @@ const PropertyDescription = ({ property }) => (
           </div>
           <p>
             <b>
-              {property.area}m<sup>2</sup>
+              {Math.floor(property.area)}m<sup>2</sup>
             </b>
           </p>
           <p className='text-muted'>Superficie Total</p>
@@ -25,14 +25,14 @@ const PropertyDescription = ({ property }) => (
           </div>
           <p>
             <b>
-              {property.area}m<sup>2</sup>
+              {Math.floor(property.area)}m<sup>2</sup>
             </b>
           </p>
           <p className='text-muted'>Superficie Construida</p>
         </div>
         <div className='Property__description__icon p-2'>
           <div className='icon'>
-            <i className='fas fa-gopuram'></i>
+            <i className='fas fa-bath'></i>
           </div>
           <p>
             <b>{property.bathrooms}</b>
@@ -41,10 +41,10 @@ const PropertyDescription = ({ property }) => (
         </div>
         <div className='Property__description__icon p-2'>
           <div className='icon'>
-            <i className='fas fa-bath'></i>
+            <i className='fas fa-parking'></i>
           </div>
           <p>
-            <b>{property.parkingLots}</b>
+            <b>{property.parkingLots / 2}</b>
           </p>
           <p className='text-muted'>Estacionamientos</p>
         </div>
@@ -62,9 +62,9 @@ const PropertyDescription = ({ property }) => (
             <i className='fas fa-calendar-alt'></i>
           </div>
           <p>
-            <b>{property.years}</b>
+            <b>{property.year}</b>
           </p>
-          <p className='text-muted'>Habitaciones</p>
+          <p className='text-muted'>Years</p>
         </div>
       </div>
     </div>

@@ -5,13 +5,13 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 
-const Related = ({ property }) => (
+const Related = ({ properties, images }) => (
   <Container className='my-4'>
     <p style={{ 'margin-left': '-5px' }}>
       <b>Más inmuebles como este</b>
     </p>
     <Row>
-      {property.related.map((image, index) => (
+      {images.map((image, index) => (
         <Col xs={12} md={6} lg={3} className='px-2 my-2 my-lg-0'>
           <Link
             to={`/propiedades/${index}`}
@@ -22,14 +22,15 @@ const Related = ({ property }) => (
               <Card.Body>
                 <p style={{ fontSize: '12px' }}>Precio Venta</p>
                 <h4 className='m-0'>
-                  <b>US$ {property.price}</b>
+                  <b>US$ {properties[index].price}</b>
                 </h4>
                 <p style={{ fontSize: '14px' }}>
-                  {property.type} · {property.area}m<sup>2</sup> ·{' '}
-                  {property.rooms} Hab. ·{property.bathrooms} · Baños
+                  Casa · {properties[index].area}m<sup>2</sup> ·{' '}
+                  {properties[index].rooms} Hab. ·{properties[index].bathrooms}{' '}
+                  · Baños
                 </p>
                 <p style={{ fontSize: '10px' }} className='text-muted'>
-                  {property.sector}, {property.parish}
+                  {properties[index].sector}, {properties[index].parish}
                 </p>
               </Card.Body>
             </Card>

@@ -9,8 +9,9 @@ import Slider from '../components/PropertySlider';
 import Description from '../components/PropertyDescription';
 import ContactForm from '../components/PropertyContactForm';
 import Related from '../components/Related';
-
 import '../assets/styles/Property.scss';
+
+const data = require('../server/properties.json');
 
 const images = [
   'https://source.unsplash.com/1000x500/?house',
@@ -53,7 +54,7 @@ const Property = (props) => (
               <b>Venta</b>
             </h3>
             <h3>
-              <b>{property.price}$</b>
+              <b>{data[Math.floor(Math.random() * 100)].price}$</b>
             </h3>
           </Card.Body>
         </Card>
@@ -63,8 +64,8 @@ const Property = (props) => (
         <Container fluid>
           <Row>
             <Col xs={12} className='mb-2 Property__hero'>
-              <Filters property={property}></Filters>
-              <Slider images={property.images}></Slider>
+              <Filters property={data[0]}></Filters>
+              <Slider images={images}></Slider>
             </Col>
           </Row>
         </Container>
@@ -106,14 +107,16 @@ const Property = (props) => (
               <div className='Property__header'>
                 <h3 className='mb-2'>
                   <b>
-                    {property.type} · {property.area}m<sup>2</sup> ·{' '}
-                    {property.rooms} Habitaciones · {property.parkingLots} ·
-                    Estacionamientos
+                    {property.type} ·{' '}
+                    {Math.floor(data[Math.floor(Math.random() * 100)].area)}m
+                    <sup>2</sup> · {data[Math.floor(Math.random() * 100)].rooms}{' '}
+                    Habitaciones · {property.parkingLots} · Estacionamientos
                   </b>
                 </h3>
                 <p className='mb-2'>
-                  <b>{property.sector}</b>, {property.parish},{' '}
-                  {property.municipality}
+                  <b>{data[Math.floor(Math.random() * 100)].sector}</b>,{' '}
+                  {data[Math.floor(Math.random() * 100)].parish},{' '}
+                  {data[Math.floor(Math.random() * 100)].municipality}
                 </p>
               </div>
               <hr className='d-xl-block d-none' />
@@ -123,11 +126,11 @@ const Property = (props) => (
                     <b>Venta</b>
                   </h3>
                   <h3>
-                    <b>{property.price}$</b>
+                    <b>{data[Math.floor(Math.random() * 100)].price}$</b>
                   </h3>
                 </Card.Body>
               </Card>
-              <Description property={property} />
+              <Description property={data[Math.floor(Math.random() * 100)]} />
             </Col>
             <Col xs={12} lg={4} className='mb-3 d-lg d-xl-none'>
               <ContactForm />
@@ -137,7 +140,7 @@ const Property = (props) => (
       </div>
     </div>
     <div className='divider bg-light p-3'>&nbsp;</div>
-    <Related property={property}></Related>
+    <Related images={related} properties={data}></Related>
   </div>
 );
 

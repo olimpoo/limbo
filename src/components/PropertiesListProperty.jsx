@@ -7,10 +7,14 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import PropertySlider from './PropertySlider';
 
+const data = require('../server/properties.json');
+
+const property = data[Math.floor(Math.random())];
+
 const images = [
   'https://source.unsplash.com/1000x500/?house',
   'https://source.unsplash.com/800x400/?house',
-  'https://source.unsplash.com/700x350/?house',
+  'https://source.unsplash.com/900x450/?house',
 ];
 
 const PropertiesListProperty = () => (
@@ -22,7 +26,7 @@ const PropertiesListProperty = () => (
             <PropertySlider images={images}></PropertySlider>
             <div className='p-3'>
               <h3 className='font-weight-normal'>
-                <b>US$ {parseInt(Math.random() * 10000)}</b>
+                <b>US$ {data[Math.floor(Math.random() * 100)].price}</b>
               </h3>
             </div>
           </Card>
@@ -30,13 +34,22 @@ const PropertiesListProperty = () => (
         <Col xs={12} md={7}>
           <div className='p-2 d-flex flex-column justify-content-between h-100'>
             <h5>
-              <a href='#'>Apartamento Consolitex Vende La Trigaleña Mirian</a>
+              <a href='#'>{data[Math.floor(Math.random() * 100)].title}</a>
             </h5>
-            <p className='mb-2'>URB LA TRIGALEÑA, La Trigaleña, Valencia</p>
+            <p className='mb-2'>
+              {data[Math.floor(Math.random() * 100)].sector},
+              {data[Math.floor(Math.random() * 100)].parish},
+              {data[Math.floor(Math.random() * 100)].municipality}
+            </p>
             <p>
               <b>
-                106 m² totales&nbsp;&nbsp; 106 m² construidos&nbsp;&nbsp; 3
-                Habitaciones&nbsp;&nbsp; 4 Baños &nbsp;&nbsp; 2 Estacionamientos
+                {data[Math.floor(Math.random() * 100)].area} m²
+                totales&nbsp;&nbsp;
+                {data[Math.floor(Math.random() * 100)].area} m² construidos
+                &nbsp;&nbsp;{data[Math.floor(Math.random() * 100)].rooms}{' '}
+                Habitaciones&nbsp;&nbsp;
+                {data[Math.floor(Math.random() * 100)].bathrooms} Baños
+                &nbsp;&nbsp; 2 Estacionamientos
               </b>
             </p>
             <p
@@ -47,11 +60,7 @@ const PropertiesListProperty = () => (
                 'font-size': '12px',
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur eveniet, optio perferendis tempora ut facere
-              voluptatibus, asperiores veritatis rerum praesentium numquam
-              consequatur est ipsum culpa distinctio quibusdam animi fuga
-              aspernatur!
+              {data[Math.floor(Math.random() * 100)].description}
             </p>
             <div class='d-flex justify-content-between align-items-center mt-3'>
               <p className='text-muted'>
@@ -59,8 +68,8 @@ const PropertiesListProperty = () => (
                 {parseInt(Math.random() * 100)} dias
               </p>
               <Button
-                variant='primary'
                 className='PropertiesListProperty__contact'
+                variant='primary'
               >
                 Contactar
               </Button>
